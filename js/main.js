@@ -1,11 +1,9 @@
-/*global $, jQuery, alert*/
+
 $(document).ready(function() {
 
   'use strict';
 
-  // ========================================================================= //
-  //  //SMOOTH SCROLL
-  // ========================================================================= //
+ 
 
 
   $(document).on("scroll", onScroll);
@@ -45,12 +43,6 @@ $(document).ready(function() {
       });
     }
   }
-
-  // ========================================================================= //
-  //  //NAVBAR SHOW - HIDE
-  // ========================================================================= //
-
-
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll > 200 ) {
@@ -63,18 +55,11 @@ $(document).ready(function() {
     }
   });
 
-  // ========================================================================= //
-  //  // RESPONSIVE MENU
-  // ========================================================================= //
-
   $('.responsive').on('click', function(e) {
     $('.nav-menu').slideToggle();
   });
 
-  // ========================================================================= //
-  //  Typed Js
-  // ========================================================================= //
-
+  
   var typed = $(".typed");
 
   $(function() {
@@ -86,9 +71,7 @@ $(document).ready(function() {
   });
 
 
-  // ========================================================================= //
-  //  Owl Carousel Services
-  // ========================================================================= //
+ 
 
 
   $('.services-carousel').owlCarousel({
@@ -101,10 +84,7 @@ $(document).ready(function() {
       responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 4 } }
     });
 
-  // ========================================================================= //
-  //  magnificPopup
-  // ========================================================================= //
-
+  
   var magnifPopup = function() {
     $('.popup-img').magnificPopup({
       type: 'image',
@@ -114,32 +94,23 @@ $(document).ready(function() {
         enabled: true
       },
       zoom: {
-        enabled: true, // By default it's false, so don't forget to enable it
+        enabled: true, 
+        duration: 300, 
+        easing: 'ease-in-out', 
 
-        duration: 300, // duration of the effect, in milliseconds
-        easing: 'ease-in-out', // CSS transition easing function
-
-        // The "opener" function should return the element from which popup will be zoomed in
-        // and to which popup will be scaled down
-        // By defailt it looks for an image tag:
+       
         opener: function(openerElement) {
-          // openerElement is the element on which popup was initialized, in this case its <a> tag
-          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+         
           return openerElement.is('img') ? openerElement : openerElement.find('img');
         }
       }
     });
   };
 
-
-  // Call the functions
   magnifPopup();
 
 });
 
-// ========================================================================= //
-//  Porfolio isotope and filter
-// ========================================================================= //
 $(window).load(function(){
 
   var portfolioIsotope = $('.portfolio-container').isotope({
