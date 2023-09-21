@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const userMessage = userInput.value;
         if (userMessage) {
             appendUserMessage(userMessage);
-            // You can add your bot's response logic here
-            // For simplicity, let's just echo the user's message as the bot's response
+           
             setTimeout(() => appendBotMessage(userMessage), 1000);
             userInput.value = "";
         }
