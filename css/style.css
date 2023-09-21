@@ -149,10 +149,20 @@ nav {
   z-index: 1000;
   width: 100%;
   padding: 20px;
-  display: none;
+  /* display: flex; */
   -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
+}
+
+.nav-logo-txt {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    border-radius: 4px;
+    text-align: right;
+    padding-right: 50px;
 }
 
 .nav-menu {
@@ -210,6 +220,9 @@ nav ul li a {
   background: url("../images/logo.png") repeat scroll center center / cover;
   height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
